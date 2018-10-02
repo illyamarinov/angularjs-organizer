@@ -1,0 +1,32 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	margin: 0 auto;
+	padding-top: 100px;
+	background-color: $body-main-bg;
+}
+
+.margin-bottom-10 { margin-bottom: 10px; }
+.margin-bottom-15 { margin-bottom: 15px; }
+.margin-bottom-20 { margin-bottom: 20px; }
+.margin-bottom-30 { margin-bottom: 30px; }
+
+.offset-left-50 {
+	margin-left: 50px;
+}
+
+.padding-right-0 {
+	padding-right: 0;
+}
+
+.content-main {
+	min-height: 100%;
+}
+
+.position-relative {
+	position: relative;
+}

@@ -1,0 +1,38 @@
+{
+  "baseDir": [
+    "app",
+    "public"
+  ],
+  "dist": {
+    "js": "public/scripts/",
+    "css": "public/css/",
+    "html": "public/"
+  },
+  "src": {
+    "indexHtml": "app/index.html",
+    "html": "app/scripts/**/*.html",
+    "scripts": [
+      "app/scripts/**/*.js"
+    ],
+    "styles": [
+      "app/scss/main.scss"
+    ],
+    "vendorStyles": [
+      "bower_components/bootstrap/dist/css/bootstrap.css"
+    ],
+    "vendorScripts": [
+      "bower_components/angular/angular.min.js",
+      "bower_components/angular-animate/angular-animate.min.js",
+      "bower_components/angular-route/angular-route.min.js",
+      "bower_components/angular-sanitize/angular-sanitize.min.js",
+      "bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js",
+      "bower_components/promise-polyfill/promise.min.js"
+    ]
+  },
+  "watch": {
+    "scripts": "app/scripts/**/*.js",
+    "styles": "app/scss/**/*.scss",
+    "vendorScripts": "bower_components/**/*.js",
+    "vendorStyles": "bower_components/**/*.css"
+  }
+}

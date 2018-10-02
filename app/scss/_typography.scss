@@ -1,0 +1,22 @@
+body {
+	font-family: $font-family-regular;
+	font-size: 14px;
+	color: $color-gray-5;
+}
+
+a {
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $color-red-main;
+	}
+
+	&:focus {
+		@include focus(2px);
+	}
+}
+
+.text-main-color {
+	color: $color-red-main;
+}
