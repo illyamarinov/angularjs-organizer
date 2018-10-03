@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.card {
+.list {
 
   &__wrapper {
     font-size: $card-font-size;
@@ -26,11 +26,14 @@
     }
   }
 
-  &__list {
+  &__items {
     list-style-type: none;
     padding: 0;
+  }
 
-    &__item {
+  &__item {
+
+    &__wrapper {
       min-height: $card-height-default;
       background-color: $card-list-color;
       margin: 0 10px;
@@ -42,10 +45,10 @@
         cursor: pointer;
         background-color: $card-list-hover-color;
       }
+    }
 
-      &__content {
-        margin: 0;
-      }
+    &__content {
+      margin: 0;
     }
   }
 

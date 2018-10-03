@@ -1,17 +1,11 @@
 <div class="board" ng-controller="boardController as board">
 
-  <div class="card__wrapper" ng-repeat="card in board.cards">
-
-    <h1 class="card__title">{{card.title}}</h1>
-
-    <ul class="card__list">
-      <li class="card__list__item" ng-repeat="item in card.list">
-        <p class="card__list__item__content">{{item.content}}</p>
-      </li>
-    </ul>
-
-    <button class="card__button" type="button" name="button">&plus; {{card.button}}</button>
-
-  </div>
+  <list
+    ng-repeat="list in lists"
+    cards="list.items"
+    title="list.title"
+    add-card="board.addCard"
+    key="{{$index}}"
+  ></list>
 
 </div>

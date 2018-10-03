@@ -1,0 +1,20 @@
+<div class="list__wrapper" >
+
+  <h1 class="list__title">{{title}}</h1>
+
+  <ul class="list__items">
+    <li class="list__item__wrapper">
+      <card ng-repeat="card in cards" content="card.content"></card>
+    </li>
+  </ul>
+
+  <button
+    class="list__button"
+    type="button"
+    name="button"
+    ng-click="addCard(key)"
+  >
+    &plus; Add a card
+  </button>
+
+</div>

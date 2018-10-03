@@ -1,25 +1,28 @@
-app.controller('boardController', function() {
-  this.cards = [
+app.controller('boardController', function($scope) {
+  this.addCard = function(index) {
+    debugger;
+    this.lists[index].items.push({
+      content: ''
+    })
+  };
+  $scope.lists = [
     {
       title: 'Need to do',
-      list: [{
+      items: [{
         content: 'Learn Angular6'
-      }],
-      button: 'Add a card'
+      }]
     },
     {
       title: 'Ready',
-      list: [{
+      items: [{
         content: 'JavaScript'
-      }],
-      button: 'Add a card'
+      }]
     },
     {
       title: 'In process',
-      list: [{
+      items: [{
         content: 'Investigate AngularJS'
-      }],
-      button: 'Add a card'
+      }]
     }
   ];
 
