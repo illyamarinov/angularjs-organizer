@@ -1,13 +1,22 @@
+// ****** Size ******
+$card-height-default: 20px;
+$card-wrapper-width-default: 272px;
+
 //Fonts
-$font-family-regular: "Segoe UI", sans-serif;
-$font-family-bold: "Segoe UI Bold", sans-serif;
-$font-family-semibold: "Segoe UI Semibold", sans-serif;
-$font-family-semilight: "Segoe UI Semilight", sans-serif;
+$card-font-size: 15px;
 
 //use mixin
 
 // ****** Colors **********
-$body-main-bg: #eeeeee;
+$card-body-color: #dfe3e6;
+$card-title-color: #17394d;
+$card-list-color: #ffffff;
+$card-list-hover-color: #eeeeee;
+
+$card-button-hover-color: rgba(9,45,66,.13);
+
+
+$body-main-bg: #0079bf;
 
 //gray
 $color-gray-1: #f6f6f6;

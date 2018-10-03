@@ -12,12 +12,7 @@
 </head>
 <body ng-controller="rootController">
     <div ng-view></div>
-    <div ng-controller="cardController as cardController">
-      hello {{cardController.world}}
-      <div ng-controller="listController as lists">
-        {{1+3}}
-      </div>
-    </div>
+
     <script src="scripts/vendor.js"></script>
     <script src="scripts/main.js"></script>
 </body>

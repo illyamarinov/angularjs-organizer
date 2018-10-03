@@ -1,0 +1,65 @@
+.board {
+  display: flex;
+}
+
+.card {
+
+  &__wrapper {
+    font-size: $card-font-size;
+    min-width: $card-wrapper-width-default;
+    margin: 10px;
+    background-color: $card-body-color;
+    border: 1px solid none;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-size: $card-font-size;
+    margin: 5px;
+    padding: 5px;
+    min-height: $card-height-default;
+    color: $body-main-bg;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+
+    &__item {
+      min-height: $card-height-default;
+      background-color: $card-list-color;
+      margin: 0 10px;
+      padding: 5px;
+      border-bottom: 1px solid;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $card-list-hover-color;
+      }
+
+      &__content {
+        margin: 0;
+      }
+    }
+  }
+
+  &__button {
+    padding: 8px;
+    text-align: left;
+    background: none;
+    border: none;
+    color: $card-title-color;
+    width: 100%;
+
+    &:hover {
+      background: $card-button-hover-color;
+      text-decoration: underline;
+    }
+  }
+}
