@@ -3,7 +3,7 @@ app.directive('list', function() {
     scope: {
       cards: '=',
       title: '=',
-      addCard: '&',
+      addCard: '=',
       key: '@'
     },
     restrict: 'E',

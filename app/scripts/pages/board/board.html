@@ -1,10 +1,10 @@
-<div class="board" ng-controller="boardController as board">
+<div class="board">
 
   <list
     ng-repeat="list in lists"
     cards="list.items"
     title="list.title"
-    add-card="board.addCard"
+    add-card="bc.addCard"
     key="{{$index}}"
   ></list>
 
