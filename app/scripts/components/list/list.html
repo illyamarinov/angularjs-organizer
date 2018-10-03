@@ -3,8 +3,8 @@
   <h1 class="list__title">{{title}}</h1>
 
   <ul class="list__items">
-    <li class="list__item__wrapper">
-      <card ng-repeat="card in cards" content="card.content"></card>
+    <li class="list__item__wrapper" ng-repeat="card in cards">
+      <card content="card.content"></card>
     </li>
   </ul>
 

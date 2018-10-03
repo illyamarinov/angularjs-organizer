@@ -1,4 +1,4 @@
-const app = angular.module('AngularJS-Trello', ['ngAnimate', 'ngRoute', 'ngSanitize']);
+const app = angular.module('Trello', ['ngAnimate', 'ngRoute', 'ngSanitize']);
 
 app.config([
     '$routeProvider', '$locationProvider', '$provide', '$httpProvider', '$qProvider', 'CONSTANTS', 'EVENTS',
