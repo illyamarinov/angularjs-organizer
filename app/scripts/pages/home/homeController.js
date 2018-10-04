@@ -1,26 +1,43 @@
-app.controller('homeController', function($scope, dashboardService) {
+app.controller('homeController', homeController);
 
-  $scope.getDashboards = dashboardService.getDashboards;
-  $scope.createDashboard = dashboardService.createDashboard;
-  $scope.deleteDashboard = dashboardService.deleteDashboard;
+homeController.$inject = ['$scope', 'dashboardService'];
+
+function homeController($scope, dashboardService) {
+  $scope.boards = [];
 
   $scope.getDashboards = function() {
-    dashboardService.getDashboards().then(function success(response) {
-      $scope.boards = response.data;
-    }, function error(response) {
-      $scope.boards = response.statusText;
-    });
+    dashboardService.getDashboards().then(
+      function(response) {
+        $scope.boards = response.data;
+      },
+      function(response) {
+        $scope.boards = response.statusText;
+      }
+    );
   };
 
-  $scope.getDashboards();
+  this.addBoard = function() {
+    var data = { name: 'Dashboard ' + ($scope.boards.length + 1) };
+    dashboardService
+      .createDashboard(data)
+      .then(function() {
+        $scope.getDashboards();
+      });
 
-  this.addBoard = function(data) {
-    $scope.createDashboard(data);
-    $scope.getDashboards();
   };
 
   this.deleteDashboard = function(id) {
-    $scope.deleteDashboard(id);
+    dashboardService
+      .deleteDashboard(id)
+      .then(function() {
+        $scope.getDashboards();
+      });
+  };
+
+  $scope.init = function() {
     $scope.getDashboards();
-  }
-});
+  };
+
+  $scope.init();
+
+};

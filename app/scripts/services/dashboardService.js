@@ -16,4 +16,4 @@ app.service('dashboardService', ['$http', 'CONSTANTS', function($http, CONSTANTS
       return $http.delete(CONSTANTS.API_URL + 'dashboards/' + id);
     }
   }
-}])
+}]);

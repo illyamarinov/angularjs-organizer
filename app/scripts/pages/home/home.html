@@ -1,13 +1,14 @@
 <!--Home page-->
 <div class="boards__list">
 
-  <div class="boards__item" ng-repeat="board in boards" >
+  <!-- <span ng-if=""></span> -->
+  <div class="boards__item" ng-repeat="board in boards">
     <h1 class="boards__item__title">{{board.name}}</h1>
     <button class="boards__button_open" type="button" name="button">Open</button>
-    <span class="boards__button_remove" ng-click="hc.deleteDashboard(boards[$index]._id)">&times;</span>
+    <span class="boards__button_remove" ng-click="hc.deleteDashboard(board._id)">&times;</span>
   </div>
 
-  <div class="boards__button_add" ng-click="hc.addBoard({name: 'New Dashboard'})">
+  <div class="boards__button_add" ng-click="hc.addBoard()">
     &plus;
   </div>
 

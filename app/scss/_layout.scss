@@ -10,6 +10,14 @@ body {
 	background-color: $body-main-bg;
 }
 
+a:focus,
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+ outline: none;
+}
+
 .margin-bottom-10 { margin-bottom: 10px; }
 .margin-bottom-15 { margin-bottom: 15px; }
 .margin-bottom-20 { margin-bottom: 20px; }
