@@ -1,13 +1,6 @@
 var constants = {
-    API_URL: "api/",
-    PATH: "app/scripts/",
-
-    // userRoles: {
-    //     all: '*',
-    //     admin: 'admin',
-    //     editor: 'editor',
-    //     guest: 'guest'
-    // }
+    API_URL: 'https://trello-api-by-angie.herokuapp.com/',
+    PATH: '',
 };
 
 app.constant('CONSTANTS', constants);

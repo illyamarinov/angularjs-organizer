@@ -1,13 +1,18 @@
 // ****** Size ******
-$card-height-default: 20px;
+$card-height-default: 32px;
 $card-wrapper-width-default: 272px;
 
 //Fonts
 $card-font-size: 15px;
+$board-title-size: 30px;
+$board-button-add-size: 50px;
+$board-button-remove-size: 20px;
 
 //use mixin
 
 // ****** Colors **********
+$board-hover-color: #c1c1c1;
+$list-border-color: rgba(#ffffff, 0);
 $card-body-color: #dfe3e6;
 $card-title-color: #17394d;
 $card-list-color: #ffffff;

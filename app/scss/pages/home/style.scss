@@ -1,0 +1,69 @@
+.boards {
+
+  &__list {
+    padding: 25px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    margin: 30px;
+    background-color: $card-body-color;
+    padding: 20px;
+    border: 1px solid;
+
+    &__title {
+      font-size: $board-title-size;
+      margin: 10px 0 25px;
+    }
+  }
+
+  &__button {
+
+    &_open {
+      background-color: $card-body-color;
+      padding: 8px;
+      text-align: center;
+      border: 1px solid;
+      border-radius: 30px;
+      color: $card-title-color;
+      width: 100%;
+
+      &:hover {
+        background: $card-button-hover-color;
+        text-decoration: underline;
+      }
+    }
+
+    &_add {
+      font-size: $board-button-add-size;
+      margin: 30px;
+      background-color: $card-body-color;
+      padding: 0 20px;
+      border: 1px solid;
+
+      &:hover {
+        background-color: $board-hover-color;
+        cursor: pointer;
+      }
+    }
+
+    &_remove {
+      background-color: $card-body-color;
+      padding: 0 7px;
+      font-size: $board-button-remove-size;
+      position: absolute;
+      border: 1px solid;
+      top: -1px;
+      right: -28px;
+
+      &:hover {
+        background-color: $board-hover-color;
+        cursor: pointer;
+      }
+    }
+
+  }
+}

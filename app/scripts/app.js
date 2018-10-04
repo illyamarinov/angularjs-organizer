@@ -9,7 +9,9 @@ app.config([
 
         $routeProvider
             .when('/', {
-                templateUrl: 'scripts/pages/home/home.html'
+                templateUrl: 'scripts/pages/home/home.html',
+                controller: 'homeController',
+                controllerAs: 'hc'
             })
             .when('/board', {
                 templateUrl: 'scripts/pages/board/board.html',
