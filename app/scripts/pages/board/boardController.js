@@ -5,12 +5,9 @@ boardController.$inject = ['$scope', '$routeParams', 'dashboardService', 'listSe
 function boardController($scope, $routeParams, dashboardService, listService) {
   const boardId = $routeParams.boardId;
 
-  $scope.boards = [];
-
   dashboardService.getDashboards().then(
     function(response) {
-      $scope.boards = response.data;
-      $scope.board = $scope.boards.find(function(item) {
+      $scope.board = response.data.find(function(item) {
         return item._id === boardId;
       });
     },
