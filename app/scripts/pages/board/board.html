@@ -1,5 +1,8 @@
-<div class="board">
-
+<header class="board">
+  <a class="board__button_back" href="#/">Back to Home</a>
+  <h1 class="board__title">{{board.name}}</h1>
+</header>
+<div class="board__content">
   <list
     ng-repeat="list in lists"
     cards="list.items"
@@ -7,5 +10,19 @@
     add-card="bc.addCard"
     key="{{$index}}"
   ></list>
+
+  <div class="list__wrapper" >
+
+    <input class="list__title_new" type="text" name="list__title" value="" />
+
+    <button
+      class="list__button_add"
+      type="button"
+      name="button"
+    >
+      &plus;
+    </button>
+
+  </div>
 
 </div>

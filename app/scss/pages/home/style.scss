@@ -1,7 +1,22 @@
+.home {
+
+  &__title {
+    background-color: $card-body-color;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0 20px;
+    width: $width-default;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    color: $body-main-bg;
+  }
+}
+
 .boards {
 
   &__list {
-    padding: 25px 100px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -9,30 +24,36 @@
 
   &__item {
     position: relative;
-    margin: 30px;
+    margin: 10px;
+    margin-right: 10px;
     background-color: $card-body-color;
     padding: 20px;
-    border: 1px solid;
+    border-radius: 5px;
 
     &__title {
+      position: relative;
       font-size: $board-title-size;
+      color: $body-main-bg;
       margin: 10px 0 25px;
+      z-index: 10;
     }
   }
 
   &__button {
 
     &_open {
+      display: block;
       background-color: $card-body-color;
       padding: 8px;
       text-align: center;
       border: 1px solid;
       border-radius: 30px;
       color: $card-title-color;
-      width: 100%;
+      width: $width-default;
 
       &:hover {
         background: $card-button-hover-color;
+        border-color: $card-button-hover-color;
         text-decoration: underline;
       }
     }
@@ -42,7 +63,7 @@
       margin: 30px;
       background-color: $card-body-color;
       padding: 0 20px;
-      border: 1px solid;
+      border-radius: 5px;
 
       &:hover {
         background-color: $board-hover-color;
@@ -51,16 +72,14 @@
     }
 
     &_remove {
-      background-color: $card-body-color;
       padding: 0 7px;
       font-size: $board-button-remove-size;
       position: absolute;
-      border: 1px solid;
-      top: -1px;
-      right: -28px;
+      top: -4px;
+      right: -1px;
+      z-index: 1;
 
       &:hover {
-        background-color: $board-hover-color;
         cursor: pointer;
       }
     }

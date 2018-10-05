@@ -1,5 +1,41 @@
 .board {
-  display: flex;
+  position: relative;
+
+  &__title {
+    background-color: $card-body-color;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0 20px;
+    min-height: $board-title-min-height;
+    width: $width-default;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    color: $body-main-bg;
+  }
+
+  &__button_back {
+    font-size: $board-title-size;
+    color: $body-main-bg;
+    z-index: 10;
+    padding: 5px 10px;
+    top: 14px;
+    left: 100px;
+    position: absolute;
+    border-radius: 5px;
+
+    &:hover {
+      text-decoration: none;
+      color: $body-main-bg;
+      background-color: $card-button-hover-color;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .list {
@@ -9,8 +45,6 @@
     min-width: $card-wrapper-width-default;
     margin: 10px;
     background-color: $card-body-color;
-    border: 1px solid;
-    border-color: rgba(#ffffff, 0);
     border-radius: 5px;
     overflow: hidden;
   }
@@ -60,7 +94,7 @@
     background: none;
     border: none;
     color: $card-title-color;
-    width: 100%;
+    width: $width-default;
 
     &:hover {
       background: $card-button-hover-color;

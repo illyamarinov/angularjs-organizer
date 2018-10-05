@@ -35,7 +35,7 @@ function homeController($scope, dashboardService) {
   };
 
   $scope.init = function() {
-    $scope.getDashboards();
+    $scope.getDashboards();    
   };
 
   $scope.init();
