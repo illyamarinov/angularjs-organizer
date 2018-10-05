@@ -13,7 +13,7 @@ app.config([
                 controller: 'homeController',
                 controllerAs: 'hc'
             })
-            .when('/board', {
+            .when('/board/:boardId', {
                 templateUrl: 'scripts/pages/board/board.html',
                 controller: 'boardController',
                 controllerAs: 'bc'

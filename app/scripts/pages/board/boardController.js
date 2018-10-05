@@ -1,4 +1,18 @@
-app.controller('boardController', ['$scope', function($scope) {
+app.controller('boardController', boardController);
+
+boardController.$inject = ['$scope', '$routeParams', 'dashboardService', 'listService'];
+
+function boardController($scope, $routeParams, dashboardService, listService) {
+  const boardId = $routeParams.boardId;
+
+  dashboardService.getDashboardbyId(boardId).then(
+    function(response) {
+      $scope.board = response.data;
+    },
+    function(response) {
+      $scope.boards = response.statusText;
+    }
+  );
 
   $scope.lists = [{
     title: 'Need to do',
@@ -15,4 +29,4 @@ app.controller('boardController', ['$scope', function($scope) {
     $scope.lists[index].items.push({ content: '' });
   };
 
-}]);
+};
