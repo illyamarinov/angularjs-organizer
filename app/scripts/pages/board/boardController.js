@@ -29,7 +29,7 @@ function boardController($scope, $routeParams, dashboardService, listService) {
 
   this.addList = function() {
     if ($scope.title === '') {
-      $scope.title = `Dashboard 1 List ${$scope.lists.length + 1}`;
+      $scope.title = `${$scope.board.name} List ${$scope.lists.length + 1}`;
     }
     const data = { title: $scope.title, _dashboardId: boardId };
     listService
