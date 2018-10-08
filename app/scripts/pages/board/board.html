@@ -7,18 +7,21 @@
     ng-repeat="list in lists"
     cards="list.items"
     title="list.title"
+    list-id="list._id"
     add-card="bc.addCard"
+    delete-list="bc.deleteList"
     key="{{$index}}"
   ></list>
 
-  <div class="list__wrapper" >
+  <div class="list__wrapper list_new" >
 
-    <input class="list__title_new" type="text" name="list__title" value="" />
+    <input class="list__title_new" type="text" name="list__title" ng-model="title"  placeholder="Enter title of new list"/>
 
     <button
       class="list__button_add"
       type="button"
       name="button"
+      ng-click="bc.addList()"
     >
       &plus;
     </button>

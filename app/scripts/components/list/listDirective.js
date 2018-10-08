@@ -3,7 +3,9 @@ app.directive('list', function() {
     scope: {
       cards: '=',
       title: '=',
+      listId: '=',
       addCard: '=',
+      deleteList: '=',
       key: '@'
     },
     restrict: 'E',
