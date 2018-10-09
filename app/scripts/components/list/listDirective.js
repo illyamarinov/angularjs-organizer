@@ -1,12 +1,8 @@
 app.directive('list', function() {
   return {
     scope: {
-      cards: '=',
-      title: '=',
-      listId: '=',
-      addCard: '=',
+      list: '=',
       deleteList: '=',
-      key: '@'
     },
     restrict: 'E',
     templateUrl: 'scripts/components/list/list.html',

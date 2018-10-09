@@ -5,12 +5,9 @@
 <div class="board__content">
   <list
     ng-repeat="list in lists"
-    cards="list.items"
-    title="list.title"
-    list-id="list._id"
-    add-card="bc.addCard"
+    list="list"
     delete-list="bc.deleteList"
-    key="{{$index}}"
+
   ></list>
 
   <div class="list__wrapper list_new" >

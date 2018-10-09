@@ -18,19 +18,21 @@
 
   &__list {
     margin: 0 auto;
-    max-width: $board-item-max-width;
+    max-width: $board-list-max-width;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
 
   &__item {
+    max-width: $board-item-max-width;
     position: relative;
     margin: 10px;
     margin-right: 10px;
     background-color: $card-body-color;
     padding: 20px;
     border-radius: 5px;
+    overflow: hidden;
 
     &__title {
       position: relative;
@@ -74,14 +76,16 @@
     }
 
     &_remove {
-      padding: 0 7px;
+      padding: 3px 11px;
       font-size: $board-button-remove-size;
       position: absolute;
-      top: -4px;
-      right: -1px;
+      top: -10px;
+      right: -7px;
       z-index: 1;
 
       &:hover {
+        border-bottom-left-radius: 100%;
+        background-color: $board-hover-color;
         cursor: pointer;
       }
     }

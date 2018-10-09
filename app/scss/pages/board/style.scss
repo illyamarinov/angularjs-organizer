@@ -35,7 +35,6 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     padding: 0 74px;
   }
 }
@@ -88,6 +87,8 @@
   &__item {
 
     &__wrapper {
+      overflow: hidden;
+      position: relative;
       min-height: $card-height-default;
       background-color: $card-list-color;
       margin: 0 10px 10px;
@@ -126,7 +127,7 @@
     }
 
     &_remove {
-      font-size: $board-button-remove-size;      
+      font-size: $board-button-remove-size;
       padding: 3px 11px;
       position: absolute;
       top: -10px;
@@ -151,6 +152,20 @@
       &:hover {
         background: $card-button-hover-color;
         text-decoration: underline;
+      }
+    }
+
+    &__card_remove {
+      padding: 3px 11px;
+      position: absolute;
+      top: -5px;
+      font-size: $card-font-size-button-remove;
+      right: 0px;
+      z-index: 1;
+
+      &:hover {
+        background-color: $board-hover-color;
+        cursor: pointer;
       }
     }
   }
