@@ -2,23 +2,33 @@
   <a class="board__button_back" href="#/">Back to Home</a>
   <h1 class="board__title">{{board.name}}</h1>
   <div class="board__search">
-    <label class="board__search__label" for="search__field">
+    <label class="board__search__label">
       Search for lists
+      <input
+        class="board__search__field_name"
+        type="search"
+        name="search__lists"
+        placeholder="List title"
+        ng-model="search.listTitle"
+      />
     </label>
+    –
     <input
-      id="search__field"
-      class="board__search__field"
-      type="search"
-      name="search"
-      placeholder="give me your name!"
-      ng-model="listTitle"
+      class="board__search__field_cards"
+      type="text"
+      name="search__cards"
+      ng-change="numbersOnly(search.cardsCount)"
+      placeholder="N"
+      maxlength="2"
+      ng-model="search.cardsCount"
     />
   </div>
 </header>
 <div class="board__content">
   <list
-    ng-repeat="list in lists | filter:listTitle"
+    ng-repeat="list in lists | filter:search.listTitle | cardsCountFilter:search.cardsCount"
     list="list"
+    cards-count="search.cardsCount"
     delete-list="bc.deleteList"
   ></list>
 

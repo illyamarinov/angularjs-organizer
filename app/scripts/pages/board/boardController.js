@@ -16,6 +16,11 @@ function boardController($scope, $routeParams, dashboardService, listService) {
     }
   );
 
+  $scope.numbersOnly = function(value) {
+    const reg = /\D/g;
+    $scope.search.cardsCount = value.replace(reg, '');
+  };
+
   $scope.getLists = function() {
     listService.getLists(boardId).then(
       function(response) {

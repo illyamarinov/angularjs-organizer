@@ -40,18 +40,34 @@
     position: relative;
     margin: 0 112px;
 
-    &__field {
-      width: $list-title-new-max-width;
-      border: 1px solid $board-hover-color;
-      padding: 7px;
-      border-radius: 5px;
-    }
-
     &__label {
       color: $body-main-bg;
       font-size: $board-search-font-size;
       font-weight: lighter;
       margin: 10px;
+      margin-right: 0;
+    }
+
+    &__field {
+
+      &_name {
+        color: $color-gray-5;
+        width: $list-title-new-max-width;
+        font-size: $card-font-size;
+        border: 1px solid $board-hover-color;
+        padding: 7px;
+        border-radius: 5px;
+        margin: 0 5px;
+      }
+
+      &_cards {
+        margin: 0 5px;
+        text-align: center;
+        width: 40px;
+        border: 1px solid $board-hover-color;
+        padding: 7px;
+        border-radius: 5px;
+      }
     }
   }
 
