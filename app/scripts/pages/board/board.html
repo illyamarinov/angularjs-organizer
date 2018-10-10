@@ -1,13 +1,25 @@
 <header class="board">
   <a class="board__button_back" href="#/">Back to Home</a>
   <h1 class="board__title">{{board.name}}</h1>
+  <div class="board__search">
+    <label class="board__search__label" for="search__field">
+      Search for lists
+    </label>
+    <input
+      id="search__field"
+      class="board__search__field"
+      type="search"
+      name="search"
+      placeholder="give me your name!"
+      ng-model="listTitle"
+    />
+  </div>
 </header>
 <div class="board__content">
   <list
-    ng-repeat="list in lists"
+    ng-repeat="list in lists | filter:listTitle"
     list="list"
     delete-list="bc.deleteList"
-
   ></list>
 
   <div class="list__wrapper list_new" >
