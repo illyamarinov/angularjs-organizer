@@ -23,7 +23,6 @@ function homeController($scope, dashboardService) {
       .then(function() {
         $scope.getDashboards();
       });
-
   };
 
   this.deleteDashboard = function(id) {
@@ -35,7 +34,7 @@ function homeController($scope, dashboardService) {
   };
 
   $scope.init = function() {
-    $scope.getDashboards();    
+    $scope.getDashboards();
   };
 
   $scope.init();

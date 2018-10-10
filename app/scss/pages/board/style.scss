@@ -10,7 +10,7 @@
     padding: 20px 0 20px;
     min-height: $board-title-min-height;
     width: $width-default;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 20px;
     color: $body-main-bg;
   }
@@ -35,18 +35,29 @@
   &__content {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    padding: 0 74px;
   }
 }
 
 .list {
 
   &__wrapper {
+    position: relative;
     font-size: $card-font-size;
     min-width: $card-wrapper-width-default;
     margin: 10px;
     background-color: $card-body-color;
     border-radius: 5px;
     overflow: hidden;
+  }
+
+  &_new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    height: $height-default;
   }
 
   &__title {
@@ -59,6 +70,13 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    &_new {
+      width: $list-title-new-max-width;
+      border: 1px solid $board-hover-color;
+      padding: 7px;
+      border-radius: 5px;
     }
   }
 
@@ -89,16 +107,51 @@
   }
 
   &__button {
-    padding: 8px;
-    text-align: left;
-    background: none;
-    border: none;
-    color: $card-title-color;
-    width: $width-default;
 
-    &:hover {
-      background: $card-button-hover-color;
-      text-decoration: underline;
+    &_add {
+      font-size: 24px;
+      border: 1px solid;
+      border-color: $board-hover-color;
+      border-radius: 5px;
+      padding: 0 10px;
+      margin: 0 0 0 10px;
+      background-color: $board-hover-color;
+
+      &:hover {
+        border: 1px solid;
+        border-color: $board-hover-color;
+        background-color: $card-body-color;
+        cursor: pointer;
+      }
+    }
+
+    &_remove {
+      font-size: $board-button-remove-size;      
+      padding: 3px 11px;
+      position: absolute;
+      top: -10px;
+      right: -7px;
+      z-index: 1;
+
+      &:hover {
+        border-bottom-left-radius: 100%;
+        background-color: $board-hover-color;
+        cursor: pointer;
+      }
+    }
+
+    &__card_add {
+      padding: 8px;
+      text-align: left;
+      background: none;
+      border: none;
+      color: $card-title-color;
+      width: $width-default;
+
+      &:hover {
+        background: $card-button-hover-color;
+        text-decoration: underline;
+      }
     }
   }
 }
