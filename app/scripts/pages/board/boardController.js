@@ -18,12 +18,7 @@ function boardController($scope, $routeParams, dashboardService, listService) {
     function(response) {
       $scope.boards = response.statusText;
     }
-  );
-
-  $scope.numbersOnly = function(value) {
-    const reg = /\D/g;
-    $scope.search.cardsCount = value.replace(reg, '');
-  };
+  );  
 
   $scope.getLists = function() {
     listService.getLists(boardId).then(
