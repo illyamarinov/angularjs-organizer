@@ -1,1 +1,4 @@
-<p class="list__item__content">{{content}}</p>
+<p ng-if="!cc.isEditing" ng-dblclick="cc.editCard(card)" class="list__item__content">{{card.title}}</p>
+<form ng-if="cc.isEditing" ng-submit="cc.updateCard(cc.editingCard)">
+  <input type="text" class="list__item__content_edit" name="edit" ng-model="cc.editingCard.title">
+</form>

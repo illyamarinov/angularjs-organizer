@@ -110,6 +110,9 @@
   &__item {
 
     &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       overflow: hidden;
       position: relative;
       min-height: $card-height-default;
@@ -127,6 +130,13 @@
 
     &__content {
       margin: 0;
+
+      &_edit {
+        width: $list-title-new-max-width;
+        border: 1px solid $board-hover-color;
+        padding: 7px;
+        border-radius: 5px;
+      }
     }
   }
 
@@ -179,11 +189,10 @@
     }
 
     &__card_remove {
-      padding: 3px 11px;
+      padding: 6px 11px;
       position: absolute;
-      top: -5px;
       font-size: $card-font-size-button-remove;
-      right: 0px;
+      right: 0;
       z-index: 1;
 
       &:hover {
