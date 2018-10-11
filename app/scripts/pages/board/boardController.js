@@ -6,6 +6,10 @@ function boardController($scope, $routeParams, dashboardService, listService) {
   const boardId = $routeParams.boardId;
   $scope.lists = [];
   $scope.title = '';
+  $scope.search = {
+    listTitle: '',
+    cardTitle: ''
+  };
 
   dashboardService.getDashboardbyId(boardId).then(
     function(response) {

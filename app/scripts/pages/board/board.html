@@ -17,19 +17,18 @@
       class="board__search__field_cards"
       type="text"
       name="search__cards"
-      ng-change="numbersOnly(search.cardsCount)"
-      placeholder="N"
-      maxlength="2"
-      ng-model="search.cardsCount"
+      placeholder="Card title"
+      ng-model="search.cardTitle"
     />
   </div>
 </header>
 <div class="board__content">
   <list
-    ng-repeat="list in lists | filter:search.listTitle | cardsCountFilter:search.cardsCount"
+    ng-repeat="list in lists | filter:search.listTitle"
     list="list"
     cards-count="search.cardsCount"
     delete-list="bc.deleteList"
+    filter="search.cardTitle"
   ></list>
 
   <div class="list__wrapper list_new" >

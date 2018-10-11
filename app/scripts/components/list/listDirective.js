@@ -3,7 +3,8 @@ app.directive('list', function() {
     scope: {
       list: '=',
       cardsCount: '=',
-      deleteList: '='
+      deleteList: '=',
+      filter: '='
     },
     restrict: 'E',
     templateUrl: 'scripts/components/list/list.html',
