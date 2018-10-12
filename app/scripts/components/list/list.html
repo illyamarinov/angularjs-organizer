@@ -4,7 +4,7 @@
 
   <ul class="list__items">
     <li class="list__item__wrapper" ng-repeat="card in cards">
-      <card card="card"></card>
+      <card class="list__item__card" card="card"></card>
       <span class="list__button__card_remove" ng-click="lc.deleteCard(card._id)">&minus;</span>
     </li>
   </ul>

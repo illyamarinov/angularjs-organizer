@@ -135,7 +135,12 @@
         width: $list-title-new-max-width;
         border: 1px solid $board-hover-color;
         border-radius: 5px;
+        padding-left: 5px;
       }
+    }
+
+    &__card {
+      width: $width-default;
     }
   }
 

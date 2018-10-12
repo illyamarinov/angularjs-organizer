@@ -1,8 +1,8 @@
 app.controller('cardController', cardController);
 
-cardController.$inject = ['$scope', 'cardService'];
+cardController.$inject = ['$scope', 'cardService', 'eventBusService'];
 
-function cardController($scope, cardService) {
+function cardController($scope, cardService, eventBusService) {
 
   this.editCard = function(card) {
     this.isEditing = true;
@@ -26,7 +26,7 @@ function cardController($scope, cardService) {
     cardService
       .updateCard(card._id, data)
       .then(function() {
-        $scope.$parent.$parent.getCards();
+        eventBusService.publish('updateList', card._listId);
       });
     this.editingCard = null;
     this.isEditing = false;
