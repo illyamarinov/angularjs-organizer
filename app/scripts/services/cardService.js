@@ -4,7 +4,7 @@ app.service('cardService', ['$http', 'CONSTANTS', function($http, CONSTANTS) {
       return $http.get(CONSTANTS.API_URL + 'lists/' + listId + '/cards');
     },
 
-    createCard: function(data) {
+    createCard: function(data) {      
       return $http.post(CONSTANTS.API_URL + 'cards', data);
     },
 

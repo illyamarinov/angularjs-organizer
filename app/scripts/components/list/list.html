@@ -3,7 +3,7 @@
   <h1 class="list__title">{{list.title}}</h1>
 
   <ul class="list__items">
-    <li class="list__item__wrapper" ng-repeat="card in cards">
+    <li class="list__item__wrapper" ng-repeat="card in cards | sortNotEmpty:'title' | filter:filter">
       <card class="list__item__card" card="card"></card>
       <span class="list__button__card_remove" ng-click="lc.deleteCard(card._id)">&minus;</span>
     </li>
