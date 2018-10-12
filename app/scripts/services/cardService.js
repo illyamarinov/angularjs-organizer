@@ -8,6 +8,10 @@ app.service('cardService', ['$http', 'CONSTANTS', function($http, CONSTANTS) {
       return $http.post(CONSTANTS.API_URL + 'cards', data);
     },
 
+    updateCard: function(cardId, data) {
+      return $http.put(CONSTANTS.API_URL + 'cards/' + cardId, data);
+    },
+
     deleteCard: function(cardId) {
       return $http.delete(CONSTANTS.API_URL + 'cards/' + cardId);
     }
