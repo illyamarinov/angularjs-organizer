@@ -9,6 +9,18 @@ function cardController($scope, cardService) {
     this.editingCard = angular.copy(card);
   }
 
+  this.closeEditEsc = function(event) {
+    if (event.keyCode === 27) {
+      this.editingCard = null;
+      this.isEditing = false;
+    }
+  }
+
+  this.closeEdit = function() {
+    this.editingCard = null;
+    this.isEditing = false;
+  }
+
   this.updateCard = function(card) {
     const data = { title: card.title, description: card.description };
     cardService
