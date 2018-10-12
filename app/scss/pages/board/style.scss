@@ -14,7 +14,8 @@
   &__title {
     position: relative;
     color: $body-main-bg;
-    margin: 0 112px;
+    margin: 0;
+    margin-left: 112px;
   }
 
   &__button_back {
@@ -38,20 +39,37 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin: 0 112px;
-
-    &__field {
-      width: $list-title-new-max-width;
-      border: 1px solid $board-hover-color;
-      padding: 7px;
-      border-radius: 5px;
-    }
+    margin-right: 112px;
 
     &__label {
       color: $body-main-bg;
       font-size: $board-search-font-size;
       font-weight: lighter;
       margin: 10px;
+      margin-right: 0;
+    }
+
+    &__field {
+
+      &_name {
+        text-align: center;
+        color: $color-gray-5;
+        width: $search-field-width;
+        font-size: $card-font-size;
+        border: 1px solid $board-hover-color;
+        padding: 7px;
+        border-radius: 5px;
+        margin: 0 5px;
+      }
+
+      &_cards {
+        margin: 0 5px;
+        text-align: center;
+        width: $search-field-width;
+        border: 1px solid $board-hover-color;
+        padding: 7px;
+        border-radius: 5px;
+      }
     }
   }
 
