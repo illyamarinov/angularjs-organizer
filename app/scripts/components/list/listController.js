@@ -1,9 +1,15 @@
 app.controller('listController', listController);
 
-listController.$inject = ['$scope', 'listService', 'cardService'];
+listController.$inject = ['$scope', 'listService', 'cardService', 'eventBusService'];
 
-function listController($scope, listService, cardService) {
+function listController($scope, listService, cardService, eventBusService) {
   $scope.cards = [];
+
+  eventBusService.subscribe('updateList', $scope, function(event, data) {
+    if ($scope.list._id === data) {
+      $scope.getCards();
+    }
+  });
 
   $scope.getCards = function() {
     cardService.getCards($scope.list._id).then(
