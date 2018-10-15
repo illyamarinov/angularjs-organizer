@@ -27,6 +27,7 @@
     ng-repeat="list in lists | filter:search.listTitle"
     list="list"
     cards-count="search.cardsCount"
+    open-modal="bc.openModal"
     delete-list="bc.deleteList"
     filter="search.cardTitle"
   ></list>
@@ -47,3 +48,14 @@
   </div>
 
 </div>
+
+<modal id="title-modal">
+  <div class="modal">
+    <div class="modal__body">
+      <h1 class="modal__title">Title edit</h1>
+      <input type="text" class="modal__input" ng-model="list.title" />
+      <button class="modal__button_close" ng-click="bc.closeModal('title-modal');">Ok</button>
+    </div>
+  </div>
+  <div class="modal__background"></div>
+</modal>
