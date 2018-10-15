@@ -8,7 +8,7 @@ function modalService() {
     modals.push(modal);
   };
 
-  servise.Remove = function(id) {
+  service.Remove = function(id) {
     modals.splice(modals.findIndex(function(modal) {
        return modal.id === id;
     }), 1);

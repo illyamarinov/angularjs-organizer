@@ -3,6 +3,7 @@ app.directive('list', function() {
     scope: {
       list: '=',
       cardsCount: '=',
+      openModal: '=',
       deleteList: '=',
       filter: '='
     },

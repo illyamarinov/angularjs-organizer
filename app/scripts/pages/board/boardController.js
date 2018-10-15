@@ -1,8 +1,8 @@
 app.controller('boardController', boardController);
 
-boardController.$inject = ['$scope', '$routeParams', 'dashboardService', 'listService'];
+boardController.$inject = ['$scope', '$routeParams', 'dashboardService', 'listService', 'modalService'];
 
-function boardController($scope, $routeParams, dashboardService, listService) {
+function boardController($scope, $routeParams, dashboardService, listService, modalService) {
   const boardId = $routeParams.boardId;
   $scope.lists = [];
   $scope.title = '';
@@ -18,7 +18,7 @@ function boardController($scope, $routeParams, dashboardService, listService) {
     function(response) {
       $scope.boards = response.statusText;
     }
-  );  
+  );
 
   $scope.getLists = function() {
     listService.getLists(boardId).then(
@@ -52,8 +52,14 @@ function boardController($scope, $routeParams, dashboardService, listService) {
       });
   };
 
-  this.addCard = function(index) {
-    $scope.lists[index].items.push({ content: '' });
+  this.openModal = function(modalId, list) {
+    modalService.Open(modalId);
+    $scope.list = list;
+  };
+
+  this.closeModal = function(modalId) {
+    listService.updateList($scope.list._id, { title: $scope.list.title });
+    modalService.Close(modalId);
   };
 
   $scope.init = function() {
